@@ -1,0 +1,143 @@
+/* -----------------------------------------------------------------------
+타이포그래피 설정
+----------------------------------------------------------------------- */
+
+/* @font-face -> 웹폰트 사용을 위한 지시어(directive) */
+/* html 파일과 같은 폴더에 들어있는 폰트 파일을 사용하는 경우 */
+@font-face {
+    font-family: "Pretendard";
+    src: url("Cafe24SsurroundAir-v1.1/Cafe24SsurroundAir-v1.1.ttf") format("truetype");
+}
+/* -----------------------------------------------------------------------
+초기화 및 기본값 설정
+----------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 박스 크기(width, height)를 내부 여백, 경계선이 포함되는 크기를 기준으로 설정. 기본값은 content-box */
+}
+a, a:link, a:hover, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+body {
+    font-family: "Pretendard";
+}
+
+
+/* -----------------------------------------------------------------------
+header 영역 - 로고, 메인메뉴
+----------------------------------------------------------------------- */
+
+header {
+    position: fixed; /* header 영역 고정 */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* header 영역의 아이템을 세로 방향으로 가운데 정렬 */
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    background-color: rgb(240, 255, 255);
+    z-index: 10000;
+}
+
+#logo {
+    font-family: "Pretendard";
+    font-size: 36px;
+}
+#logo a:hover {
+    color: rgb(48, 196, 229);
+    transition: 0.3s;
+}
+
+.navmenu {
+    display: flex;
+    gap: 20px; /* flex 아이템 사이의 간격 */
+}
+/* #navmenu 요소에 포함된 a 태그 스타일 설정 */
+.navmenu a {
+    color: #000;
+}
+.navmenu a:link {
+    text-decoration: none;
+}
+.navmenu a:hover {
+    color: rgb(48, 196, 229);
+    font-weight: 700;
+}
+
+/* ~~여기까지 교수님꺼쌤쳐오기 */
+
+.conteiner{
+    text-align: center;
+    margin-top: 300px;
+}
+
+.card-box{
+    position: relative;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 280px;
+    height: 360px;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 10px 20px #222028;
+    overflow: hidden;
+    z-index: 0;
+    transition: 0.2s;
+}
+.card-box:hover {
+    transform: scale(0.95)
+}
+
+.img-gradient{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(30,30,30,0) 40%, rgb(177, 33, 33));
+    z-index: 1;
+}
+.text-wrap{
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+    z-index: 2;
+    text-align: left;
+}
+.text-wrap h1{
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.text-wrap p{
+    color: #ffffff;
+    font-size: 15px;
+}
+.play-button{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    background: rgb(249, 239, 43) url(./img/play.png) no-repeat center;
+    background-size: 16px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* -----------------------------------------------------------------------
+footer 영역 - 저작권 정보
+----------------------------------------------------------------------- */
+
+footer {
+    padding-bottom: 20px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 14px;
+}
